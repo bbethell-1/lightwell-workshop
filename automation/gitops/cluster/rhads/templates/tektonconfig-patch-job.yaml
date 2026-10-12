@@ -102,7 +102,7 @@ spec:
                 sleep 10
               done
 
-              CHAIN_IS=$(oc get tektoninstallersets --no-headers | grep "^chain-" | grep -v "config\|secret" | awk '{print $1}')
+              CHAIN_IS=$(oc get tektoninstallersets --no-headers | grep "^chain-" | grep -v "config\|secret\|custom" | awk '{print $1}')
               if [ -n "${CHAIN_IS}" ]; then
                 oc get tektoninstallerset ${CHAIN_IS} -o json | \
                   python3 -c "
