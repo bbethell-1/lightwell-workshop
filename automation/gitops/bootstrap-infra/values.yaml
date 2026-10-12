@@ -70,6 +70,11 @@ rhtas:
     keycloakJob: "1"
     securesign: "2"
 
+pipelines:
+  channel: pipelines-1.24
+  chains:
+    audience: trusted-artifact-signer
+
 quay:
   namespace: lightwell-quay
   channel: stable-3.18

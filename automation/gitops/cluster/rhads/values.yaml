@@ -31,4 +31,11 @@ rhtas:
     keycloakJob: "1"
     securesign: "2"
 
+pipelines:
+  channel: pipelines-1.24
+  chains:
+    fulcioAddress: http://fulcio-server.trusted-artifact-signer.svc
+    rekorAddress: http://rekor-server.trusted-artifact-signer.svc
+    audience: trusted-artifact-signer
+
 jobAnsibleImage: quay.io/agnosticd/ee-multicloud:chained-2026-08-05
